@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ac31a6-4638-43bc-89ae-00b1c32e631f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pong.iws" />
@@ -69,10 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PongGame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PongGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="27" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1173">
+            <state line="112" column="9" selection-start="3263" selection-end="3263" vertical-scroll-proportion="0.5602537" vertical-offset="1639" max-vertical-offset="3485">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,29 +81,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameObject.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameObject.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="187" selection-end="187" vertical-scroll-proportion="0.18453188" vertical-offset="0" max-vertical-offset="1258">
+            <state line="84" column="27" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1853">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#803#804#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
-                <element signature="e#903#904#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#992#993#0" expanded="true" />
-                <element signature="e#1028#1029#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1148#1149#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1253#1254#0" expanded="true" />
+                <element signature="e#1288#1289#0" expanded="true" />
+                <element signature="e#1321#1322#0" expanded="true" />
+                <element signature="e#1356#1357#0" expanded="true" />
+                <element signature="e#1389#1390#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#1545#1546#0" expanded="true" />
+                <element signature="e#1581#1582#0" expanded="true" />
+                <element signature="e#1612#1613#0" expanded="true" />
+                <element signature="e#1744#1745#0" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ball.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="20" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Paddle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="5" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,8 +145,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
       </list>
     </option>
   </component>
@@ -205,7 +232,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.tabs" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -384,6 +411,11 @@
       <created>1387249950344</created>
       <updated>1387249950344</updated>
     </task>
+    <task id="LOCAL-00001" summary="GameObject created">
+      <created>1387338318136</created>
+      <updated>1387338318136</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -395,6 +427,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -407,10 +440,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32896462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -427,6 +459,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="GameObject created" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameObject created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -463,36 +497,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
+    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/glutils/ShapeRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="27" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1173">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="85" column="13" selection-start="3713" selection-end="3713" vertical-scroll-proportion="-2.2558138" vertical-offset="2070" max-vertical-offset="16082">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="5" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="187" selection-end="187" vertical-scroll-proportion="0.18453188" vertical-offset="0" max-vertical-offset="1258">
+        <state line="84" column="27" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1853">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="9" selection-start="3263" selection-end="3263" vertical-scroll-proportion="0.5602537" vertical-offset="1639" max-vertical-offset="3485">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

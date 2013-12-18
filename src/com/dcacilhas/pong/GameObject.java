@@ -17,9 +17,40 @@ public abstract class GameObject {
     }
 
     public Rectangle getBounds() {
-        bounds.setX(position.x);
-        bounds.setY(position.y);
+        updateBounds();
         return bounds;
+    }
+
+    public void setBounds(Rectangle bounds) {
+        this.bounds = bounds;
+    }
+
+    public void updateBounds() {
+        bounds.set(position.x, position.y, bounds.width, bounds.height);
+    }
+
+    public float getHeight() {
+        return bounds.height;
+    }
+
+    public float getWidth() {
+        return bounds.width;
+    }
+
+    public float bottom() {
+        return bounds.y;
+    }
+
+    public float top() {
+        return bounds.y + bounds.height;
+    }
+
+    public float left() {
+        return bounds.x;
+    }
+
+    public float right() {
+        return bounds.x + bounds.width;
     }
 
     public float getX() {
@@ -48,6 +79,10 @@ public abstract class GameObject {
 
     public Vector2 getVelocity() {
         return velocity;
+    }
+
+    public void setVelocity(float x, float y) {
+        velocity.set(x, y);
     }
 
     public void setVelocity(Vector2 velocity) {
