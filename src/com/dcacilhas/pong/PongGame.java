@@ -15,12 +15,20 @@ import com.badlogic.gdx.math.Vector2;
  * Created by dcacilhas on 12/16/13.
  */
 public class PongGame implements ApplicationListener {
+    private static final float BALL_MAX_SPEED = 650f;
+    private static final float BALL_REFLECT_ANGLE = 70f;
+    private static final float BALL_VELOCITY = 350f;
+    private static final float BALL_VELOCITY_MODIFIER = 1.1f;
+    private static final float PADDLE_VELOCITY = 400f;
     private Rectangle field = new Rectangle();
     private Ball ball = new Ball();
     private Paddle paddle1 = new Paddle(), paddle2 = new Paddle();
     private ShapeRenderer shapeRenderer;
     private FPSLogger fps = new FPSLogger();
     private float fieldTop, fieldBottom, fieldRight, fieldLeft;
+    private GameState currentState = GameState.NEW;
+    private enum GameState { NEW, RESET, PLAY }
+    private int score1 = 0, score2 = 0;
 
     @Override
     public void create() {
@@ -30,6 +38,7 @@ public class PongGame implements ApplicationListener {
         fieldBottom = field.y;
         fieldTop = field.y + field.height;
         shapeRenderer = new ShapeRenderer();
+        newGame();
         reset();
     }
 
@@ -47,9 +56,36 @@ public class PongGame implements ApplicationListener {
     }
 
     private void update(float dt) {
-        updateBall(dt);
-        updatePaddle1(dt);
-        updatePaddle2(dt);
+        switch (currentState) {
+            case NEW:
+                newGame();
+                reset();
+                currentState = GameState.PLAY;
+                break;
+            case RESET:
+                reset();
+                currentState = GameState.PLAY;
+                break;
+            case PLAY:
+                handleInput();
+                updateBall(dt);
+                updatePaddle1(dt);
+                updatePaddle2(dt);
+                break;
+        }
+    }
+
+    private void handleInput() {
+        if (Gdx.input.isKeyPressed(Input.Keys.N)) {
+            currentState = GameState.NEW;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+            Gdx.app.exit();
+        }
+    }
+
+    private void newGame() {
+        score1 = 0;
+        score2 = 0;
     }
 
     private void updatePaddle1(float dt) {
@@ -64,9 +100,9 @@ public class PongGame implements ApplicationListener {
         }
 
         if (moveUp) {
-            paddle1.setVelocity(0f, 300f);
+            paddle1.setVelocity(0f, PADDLE_VELOCITY);
         } else if (moveDown) {
-            paddle1.setVelocity(0f, -300f);
+            paddle1.setVelocity(0f, -PADDLE_VELOCITY);
         } else {
             paddle1.setVelocity(0f, 0f);
         }
@@ -97,9 +133,9 @@ public class PongGame implements ApplicationListener {
         }
 
         if (moveUp) {
-            paddle2.setVelocity(0f, 300f);
+            paddle2.setVelocity(0f, PADDLE_VELOCITY);
         } else if (moveDown) {
-            paddle2.setVelocity(0f, -300f);
+            paddle2.setVelocity(0f, -PADDLE_VELOCITY);
         } else {
             paddle2.setVelocity(0f, 0f);
         }
@@ -122,6 +158,7 @@ public class PongGame implements ApplicationListener {
         ball.integrate(dt);
         ball.updateBounds();
 
+        // Ball collision with field
         if (ball.left() < fieldLeft) {
             ball.move(fieldLeft, ball.getY());
             ball.reflect(true, false);
@@ -137,6 +174,39 @@ public class PongGame implements ApplicationListener {
         if (ball.top() > fieldTop) {
             ball.move(ball.getX(), fieldTop - ball.getHeight());
             ball.reflect(false, true);
+        }
+
+        // Ball collision with paddles
+        if (ball.getBounds().overlaps(paddle1.getBounds())) {
+            if (ball.left() < paddle1.right() && ball.right() > paddle1.right()){
+                ball.move(paddle1.right(), ball.getY());
+                ball.reflect(true, false);
+
+                float ballCenterY = ball.getY() + (ball.getHeight() / 2);
+                float paddleCenterY = paddle1.getY() + (paddle1.getHeight() / 2);
+                float centerDiff = ballCenterY - paddleCenterY;
+                float position = centerDiff / paddle1.getHeight();
+                float angle = BALL_REFLECT_ANGLE * position;
+                Vector2 velocity = ball.getVelocity();
+                velocity.setAngle(angle);
+                velocity.scl(BALL_VELOCITY_MODIFIER);
+                ball.setVelocity(velocity);
+            }
+        } else if (ball.getBounds().overlaps(paddle2.getBounds())) {
+            if (ball.right() > paddle2.left() && ball.left() < paddle2.left()) {
+                ball.move(paddle2.left() - ball.getWidth(), ball.getY());
+                ball.reflect(true, false);
+
+                float ballCenterY = ball.getY() + (ball.getHeight() / 2);
+                float paddleCenterY = paddle2.getY() + (paddle2.getHeight() / 2);
+                float centerDiff = ballCenterY - paddleCenterY;
+                float position = centerDiff / paddle2.getHeight();
+                float angle = BALL_REFLECT_ANGLE * position;
+                Vector2 velocity = ball.getVelocity();
+                velocity.setAngle(180f - angle);
+                velocity.scl(BALL_VELOCITY_MODIFIER);
+                ball.setVelocity(velocity);
+            }
         }
     }
 
@@ -163,8 +233,8 @@ public class PongGame implements ApplicationListener {
         // Reset ball
         ball.move(field.x + (field.width - ball.getWidth()) /2, field.y + (field.height - ball.getHeight()) /2);
         Vector2 velocity = ball.getVelocity();
-        velocity.set(300, 0);
-        velocity.setAngle(360 - 45);
+        velocity.set(BALL_VELOCITY, 0);
+        velocity.setAngle(-45);
         ball.setVelocity(velocity);
 
         // Reset paddles
