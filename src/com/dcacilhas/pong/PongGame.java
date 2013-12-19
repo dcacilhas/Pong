@@ -5,8 +5,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
@@ -15,7 +19,7 @@ import com.badlogic.gdx.math.Vector2;
  * Created by dcacilhas on 12/16/13.
  */
 public class PongGame implements ApplicationListener {
-    private static final float BALL_MAX_SPEED = 650f;
+    private static final float BALL_MAX_SPEED = 800f;
     private static final float BALL_REFLECT_ANGLE = 70f;
     private static final float BALL_VELOCITY = 350f;
     private static final float BALL_VELOCITY_MODIFIER = 1.1f;
@@ -24,6 +28,9 @@ public class PongGame implements ApplicationListener {
     private Ball ball = new Ball();
     private Paddle paddle1 = new Paddle(), paddle2 = new Paddle();
     private ShapeRenderer shapeRenderer;
+    private FreeTypeFontGenerator generator;
+    private BitmapFont font;
+    private SpriteBatch batch;
     private FPSLogger fps = new FPSLogger();
     private float fieldTop, fieldBottom, fieldRight, fieldLeft;
     private GameState currentState = GameState.NEW;
@@ -38,6 +45,10 @@ public class PongGame implements ApplicationListener {
         fieldBottom = field.y;
         fieldTop = field.y + field.height;
         shapeRenderer = new ShapeRenderer();
+        batch = new SpriteBatch();
+        generator = new FreeTypeFontGenerator(Gdx.files.internal("assets/arcade.ttf"));
+        font = generator.generateFont(128);
+        font.setColor(Color.WHITE);
         newGame();
         reset();
     }
@@ -49,7 +60,8 @@ public class PongGame implements ApplicationListener {
 
     @Override
     public void render() {
-        fps.log();
+        //fps.log();
+        System.out.println("Velocity.x: " + ball.getVelocityX() + " | Velocity.y: " + ball.getVelocityY());
         float dt = Gdx.graphics.getRawDeltaTime();
         update(dt);
         draw(dt);
@@ -160,12 +172,16 @@ public class PongGame implements ApplicationListener {
 
         // Ball collision with field
         if (ball.left() < fieldLeft) {
-            ball.move(fieldLeft, ball.getY());
-            ball.reflect(true, false);
+//            ball.move(fieldLeft, ball.getY());
+//            ball.reflect(true, false);
+            score2++;
+            currentState = GameState.RESET;
         }
         if (ball.right() > fieldRight) {
-            ball.move(fieldRight - ball.getWidth(), ball.getY());
-            ball.reflect(true, false);
+//            ball.move(fieldRight - ball.getWidth(), ball.getY());
+//            ball.reflect(true, false);
+            score1++;
+            currentState = GameState.RESET;
         }
         if (ball.bottom() < fieldBottom) {
             ball.move(ball.getX(), fieldBottom);
@@ -190,7 +206,12 @@ public class PongGame implements ApplicationListener {
                 Vector2 velocity = ball.getVelocity();
                 velocity.setAngle(angle);
                 velocity.scl(BALL_VELOCITY_MODIFIER);
-                ball.setVelocity(velocity);
+
+                if (velocity.x >= BALL_MAX_SPEED) {
+                    ball.setVelocity(BALL_MAX_SPEED, ball.getVelocityY());
+                } else {
+                    ball.setVelocity(velocity);
+                }
             }
         } else if (ball.getBounds().overlaps(paddle2.getBounds())) {
             if (ball.right() > paddle2.left() && ball.left() < paddle2.left()) {
@@ -205,7 +226,11 @@ public class PongGame implements ApplicationListener {
                 Vector2 velocity = ball.getVelocity();
                 velocity.setAngle(180f - angle);
                 velocity.scl(BALL_VELOCITY_MODIFIER);
-                ball.setVelocity(velocity);
+                if (velocity.x <= -BALL_MAX_SPEED ) {
+                    ball.setVelocity(-BALL_MAX_SPEED, ball.getVelocityY());
+                } else {
+                    ball.setVelocity(velocity);
+                }
             }
         }
     }
@@ -214,10 +239,19 @@ public class PongGame implements ApplicationListener {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
+        shapeRenderer.line(field.getWidth()/2, field.y, field.getWidth()/2, field.getHeight());
+        shapeRenderer.end();
+
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         drawBall(dt);
         drawPaddles(dt);
         shapeRenderer.end();
+
+        batch.begin();
+        font.draw(batch, Integer.toString(score1), field.x + field.getWidth() / 2 * 0.8f - font.getBounds(Integer.toString(score1)).width, field.y + field.getHeight() * 0.9f);
+        font.draw(batch, Integer.toString(score2), field.x + field.getWidth() / 2 * 1.2f, field.y + field.getHeight() * 0.9f);
+        batch.end();
     }
 
     private void drawPaddles(float dt) {
@@ -255,6 +289,9 @@ public class PongGame implements ApplicationListener {
 
     @Override
     public void dispose() {
+        batch.dispose();
+        font.dispose();
+        generator.dispose();
     }
 
     public static void main(String[] args) {

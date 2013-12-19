@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ac31a6-4638-43bc-89ae-00b1c32e631f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/gdx-freetype-natives.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/gdx-freetype.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -70,9 +72,16 @@
       <file leaf-file-name="PongGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="18" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.32005313" vertical-offset="439" max-vertical-offset="4675">
+            <state line="21" column="50" selection-start="837" selection-end="837" vertical-scroll-proportion="-4.269231" vertical-offset="2244" max-vertical-offset="3553">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#updatePaddle1#0;class#PongGame#0" expanded="false" />
+                <element signature="method#updatePaddle2#0;class#PongGame#0" expanded="false" />
+                <element signature="method#draw#0;class#PongGame#0" expanded="false" />
+                <element signature="method#drawPaddles#0;class#PongGame#0" expanded="false" />
+                <element signature="method#drawBall#0;class#PongGame#0" expanded="false" />
+                <element signature="method#reset#0;class#PongGame#0" expanded="false" />
+                <element signature="method#main#0;class#PongGame#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,7 +90,7 @@
       <file leaf-file-name="GameObject.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1853">
+            <state line="11" column="47" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="857" max-vertical-offset="1462">
               <folding />
             </state>
           </provider>
@@ -90,7 +99,7 @@
       <file leaf-file-name="Ball.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="20" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="425">
+            <state line="9" column="20" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -99,7 +108,7 @@
       <file leaf-file-name="Paddle.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="5" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
+            <state line="8" column="5" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
               <folding />
             </state>
           </provider>
@@ -187,11 +196,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pong" />
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,6 +243,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dcacilhas\IdeaProjects\Pong\libs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dcacilhas\IdeaProjects\Pong\libs" />
     </key>
@@ -415,7 +423,11 @@
       <created>1387346450581</created>
       <updated>1387346450581</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GameState implemented">
+      <created>1387404325267</created>
+      <updated>1387404325267</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -429,18 +441,18 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3992298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3992298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32110092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32092425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -461,7 +473,8 @@
     </option>
     <MESSAGE value="GameObject created" />
     <MESSAGE value="Ball collision, Paddles created and moving" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ball collision, Paddles created and moving" />
+    <MESSAGE value="GameState implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameState implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -476,6 +489,13 @@
         <state line="15" column="45" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4080">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#updatePaddle1#0;class#PongGame#0" expanded="false" />
+            <element signature="method#updatePaddle2#0;class#PongGame#0" expanded="false" />
+            <element signature="method#draw#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawPaddles#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawBall#0;class#PongGame#0" expanded="false" />
+            <element signature="method#reset#0;class#PongGame#0" expanded="false" />
+            <element signature="method#main#0;class#PongGame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,6 +526,13 @@
         <state line="5" column="23" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#updatePaddle1#0;class#PongGame#0" expanded="false" />
+            <element signature="method#updatePaddle2#0;class#PongGame#0" expanded="false" />
+            <element signature="method#draw#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawPaddles#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawBall#0;class#PongGame#0" expanded="false" />
+            <element signature="method#reset#0;class#PongGame#0" expanded="false" />
+            <element signature="method#main#0;class#PongGame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -515,6 +542,13 @@
         <state line="5" column="23" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#updatePaddle1#0;class#PongGame#0" expanded="false" />
+            <element signature="method#updatePaddle2#0;class#PongGame#0" expanded="false" />
+            <element signature="method#draw#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawPaddles#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawBall#0;class#PongGame#0" expanded="false" />
+            <element signature="method#reset#0;class#PongGame#0" expanded="false" />
+            <element signature="method#main#0;class#PongGame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -524,6 +558,13 @@
         <state line="5" column="23" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#updatePaddle1#0;class#PongGame#0" expanded="false" />
+            <element signature="method#updatePaddle2#0;class#PongGame#0" expanded="false" />
+            <element signature="method#draw#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawPaddles#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawBall#0;class#PongGame#0" expanded="false" />
+            <element signature="method#reset#0;class#PongGame#0" expanded="false" />
+            <element signature="method#main#0;class#PongGame#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -535,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="5" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -549,18 +583,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1853">
+        <state line="11" column="47" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="18" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.32005313" vertical-offset="439" max-vertical-offset="4675">
+        <state line="21" column="50" selection-start="837" selection-end="837" vertical-scroll-proportion="-4.269231" vertical-offset="2244" max-vertical-offset="3553">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#updatePaddle1#0;class#PongGame#0" expanded="false" />
+            <element signature="method#updatePaddle2#0;class#PongGame#0" expanded="false" />
+            <element signature="method#draw#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawPaddles#0;class#PongGame#0" expanded="false" />
+            <element signature="method#drawBall#0;class#PongGame#0" expanded="false" />
+            <element signature="method#reset#0;class#PongGame#0" expanded="false" />
+            <element signature="method#main#0;class#PongGame#0" expanded="false" />
           </folding>
         </state>
       </provider>
