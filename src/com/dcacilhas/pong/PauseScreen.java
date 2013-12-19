@@ -17,7 +17,7 @@ public class PauseScreen implements Screen {
     private FreeTypeFontGenerator generator;
     private BitmapFont paused;
     private BitmapFont message;
-    private String msg = "N - New Game\nQ - Quit\nAny Key - Resume";
+    private String msg = "N - New Game\nQ - Quit\nR - Resume";
 
 
     public PauseScreen(PongGame g) {
@@ -40,7 +40,7 @@ public class PauseScreen implements Screen {
         batch.end();
         if (Gdx.input.isKeyPressed(Input.Keys.Q)) {
             Gdx.app.exit();
-        } else if (Gdx.input.isKeyPressed(Input.Keys.ANY_KEY) && !Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+        } else if (Gdx.input.isKeyPressed(Input.Keys.R) && !Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
             game.setScreen(game.gameScreen);
         }
     }
@@ -72,6 +72,9 @@ public class PauseScreen implements Screen {
 
     @Override
     public void dispose() {
-
+        batch.dispose();
+        paused.dispose();
+        message.dispose();
+        generator.dispose();
     }
 }

@@ -1,8 +1,8 @@
 package com.dcacilhas.pong;
 
 import com.badlogic.gdx.*;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -20,6 +20,9 @@ public class GameScreen implements Screen {
     private static final float BALL_VELOCITY = 350f;
     private static final float BALL_VELOCITY_MODIFIER = 1.1f;
     private static final float PADDLE_VELOCITY = 400f;
+    private PongGame game;
+    private Sound paddle = Gdx.audio.newSound(Gdx.files.internal("assets/paddle.wav"));
+    private Sound score = Gdx.audio.newSound(Gdx.files.internal("assets/score.wav"));
     private Rectangle field = new Rectangle();
     private Ball ball = new Ball();
     private Paddle paddle1 = new Paddle(), paddle2 = new Paddle();
@@ -31,7 +34,6 @@ public class GameScreen implements Screen {
     private GameState currentState = GameState.NEW;
     private enum GameState { NEW, RESET, PLAY, PAUSED }
     private int score1 = 0, score2 = 0;
-    private PongGame game;
 
     public GameScreen (PongGame g) {
         this.game = g;
@@ -194,12 +196,14 @@ public class GameScreen implements Screen {
 //            ball.move(fieldLeft, ball.getY());
 //            ball.reflect(true, false);
             score2++;
+            score.play();
             reset();
         }
         if (ball.right() > fieldRight) {
 //            ball.move(fieldRight - ball.getWidth(), ball.getY());
 //            ball.reflect(true, false);
             score1++;
+            score.play();
             reset();
         }
         if (ball.bottom() < fieldBottom) {
@@ -232,6 +236,7 @@ public class GameScreen implements Screen {
                     ball.setVelocity(velocity);
                 }
             }
+            paddle.play();
         } else if (ball.getBounds().overlaps(paddle2.getBounds())) {
             if (ball.right() > paddle2.left() && ball.left() < paddle2.left()) {
                 ball.move(paddle2.left() - ball.getWidth(), ball.getY());
@@ -251,6 +256,7 @@ public class GameScreen implements Screen {
                     ball.setVelocity(velocity);
                 }
             }
+            paddle.play();
         }
     }
 
@@ -311,5 +317,7 @@ public class GameScreen implements Screen {
         batch.dispose();
         font.dispose();
         generator.dispose();
+        paddle.dispose();
+        score.dispose();
     }
 }

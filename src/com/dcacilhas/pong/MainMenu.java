@@ -43,7 +43,7 @@ public class MainMenu implements Screen {
         message.draw(batch, MESSAGE, w / 2 - message.getBounds(MESSAGE).width / 2, h * 0.25f);
         batch.end();
 
-        if(Gdx.input.isButtonPressed(Input.Buttons.LEFT) || Gdx.input.isKeyPressed(Input.Keys.ANY_KEY)) {
+        if(!Gdx.input.isKeyPressed(Input.Keys.ESCAPE) && Gdx.input.isKeyPressed(Input.Keys.ANY_KEY)) {
             game.setScreen(game.gameScreen);
         }
     }
