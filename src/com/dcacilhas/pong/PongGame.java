@@ -3,11 +3,13 @@ package com.dcacilhas.pong;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.graphics.FPSLogger;
 
 /**
  * Created by dcacilhas on 12/18/13.
  */
 public class PongGame extends Game {
+    private FPSLogger fps = new FPSLogger();
 
     @Override
     public void create() {
@@ -22,6 +24,7 @@ public class PongGame extends Game {
     @Override
     public void render() {
         super.render();
+        fps.log();
     }
 
     @Override

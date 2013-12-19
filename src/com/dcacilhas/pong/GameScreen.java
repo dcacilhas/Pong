@@ -73,7 +73,7 @@ public class GameScreen implements Screen {
     @Override
     public void render(float dt) {
         //fps.log();
-        System.out.println("Velocity.x: " + ball.getVelocityX() + " | Velocity.y: " + ball.getVelocityY());
+        //System.out.println("Velocity.x: " + ball.getVelocityX() + " | Velocity.y: " + ball.getVelocityY());
         dt = Gdx.graphics.getRawDeltaTime();
         update(dt);
         draw(dt);

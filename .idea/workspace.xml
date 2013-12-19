@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9ac31a6-4638-43bc-89ae-00b1c32e631f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" />
+    <list default="true" id="a9ac31a6-4638-43bc-89ae-00b1c32e631f" name="Default" comment="Trying to add splash/menu screens&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -72,7 +72,7 @@
       <file leaf-file-name="PongGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="8" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="986">
+            <state line="44" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1037">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,7 +83,7 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="513" selection-end="513" vertical-scroll-proportion="0.4827586" vertical-offset="102" max-vertical-offset="1139">
+            <state line="40" column="37" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.29166666" vertical-offset="540" max-vertical-offset="1564">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,12 +94,11 @@
       <file leaf-file-name="GameScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="17" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="2873">
+            <state line="29" column="4" selection-start="1152" selection-end="1192" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="4012">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updatePaddle1#0;class#GameScreen#0" expanded="false" />
                 <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-                <element signature="method#updateBall#0;class#GameScreen#0" expanded="false" />
                 <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
                 <element signature="method#drawBall#0;class#GameScreen#0" expanded="false" />
                 <element signature="method#reset#0;class#GameScreen#0" expanded="false" />
@@ -151,9 +150,9 @@
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
       </list>
     </option>
   </component>
@@ -453,7 +452,11 @@
       <created>1387416632076</created>
       <updated>1387416632076</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Trying to add splash/menu screens">
+      <created>1387423650319</created>
+      <updated>1387423650319</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -501,7 +504,8 @@
     <MESSAGE value="Ball collision, Paddles created and moving" />
     <MESSAGE value="GameState implemented" />
     <MESSAGE value="Score displayed, max speed implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Score displayed, max speed implemented" />
+    <MESSAGE value="Trying to add splash/menu screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to add splash/menu screens" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -518,7 +522,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#updatePaddle1#0;class#GameScreen#0" expanded="false" />
             <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#updateBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#reset#0;class#GameScreen#0" expanded="false" />
@@ -554,7 +557,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#updatePaddle1#0;class#GameScreen#0" expanded="false" />
             <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#updateBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#reset#0;class#GameScreen#0" expanded="false" />
@@ -569,7 +571,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#updatePaddle1#0;class#GameScreen#0" expanded="false" />
             <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#updateBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#reset#0;class#GameScreen#0" expanded="false" />
@@ -584,7 +585,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#updatePaddle1#0;class#GameScreen#0" expanded="false" />
             <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#updateBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#reset#0;class#GameScreen#0" expanded="false" />
@@ -629,28 +629,18 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.33333334" vertical-offset="374" max-vertical-offset="1037">
+        <state line="61" column="0" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.4814815" vertical-offset="578" max-vertical-offset="1037">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="986">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="17" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="2873">
+        <state line="29" column="4" selection-start="1152" selection-end="1192" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="4012">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updatePaddle1#0;class#GameScreen#0" expanded="false" />
             <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#updateBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
             <element signature="method#drawBall#0;class#GameScreen#0" expanded="false" />
             <element signature="method#reset#0;class#GameScreen#0" expanded="false" />
@@ -658,9 +648,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1037">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="513" selection-end="513" vertical-scroll-proportion="0.4827586" vertical-offset="102" max-vertical-offset="1139">
+        <state line="40" column="37" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.29166666" vertical-offset="540" max-vertical-offset="1564">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
