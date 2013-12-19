@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ac31a6-4638-43bc-89ae-00b1c32e631f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pong.iws" />
@@ -72,7 +71,7 @@
       <file leaf-file-name="PongGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1088">
+            <state line="44" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -81,29 +80,45 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="44" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1360">
+            <state line="46" column="44" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScreen.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="39" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.6227898" vertical-offset="278" max-vertical-offset="5015">
+            <state line="193" column="40" selection-start="5555" selection-end="5555" vertical-scroll-proportion="0.0" vertical-offset="4914" max-vertical-offset="5423">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-                <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PauseScreen.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="26" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+              <folding>
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#1581#1582#0" expanded="true" />
+                <element signature="e#1612#1613#0" expanded="true" />
+                <element signature="e#1744#1745#0" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PauseScreen.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="20" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+            <state line="39" column="20" selection-start="1391" selection-end="1391" vertical-scroll-proportion="1.0333989" vertical-offset="137" max-vertical-offset="1462">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,10 +141,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Paddle.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java" />
-        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" />
       </list>
     </option>
@@ -443,7 +458,11 @@
       <created>1387440288112</created>
       <updated>1387440288112</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sounds added">
+      <created>1387487180555</created>
+      <updated>1387487180556</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -494,7 +513,8 @@
     <MESSAGE value="Trying to add splash/menu screens" />
     <MESSAGE value="Main menu done" />
     <MESSAGE value="Pause (kind of?) done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pause (kind of?) done" />
+    <MESSAGE value="Sounds added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sounds added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -523,8 +543,6 @@
         <state line="260" column="8" selection-start="8365" selection-end="8540" vertical-scroll-proportion="0.0" vertical-offset="4420" max-vertical-offset="5457">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -543,8 +561,6 @@
         <state line="15" column="45" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4080">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -552,7 +568,16 @@
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1853">
-          <folding />
+          <folding>
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,8 +600,6 @@
         <state line="5" column="23" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -586,8 +609,6 @@
         <state line="5" column="23" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -597,8 +618,6 @@
         <state line="5" column="23" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -622,13 +641,6 @@
         <state line="1664" column="0" selection-start="70110" selection-end="70110" vertical-scroll-proportion="0.33333334" vertical-offset="26945" max-vertical-offset="53329" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="0" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.4814815" vertical-offset="578" max-vertical-offset="1037">
@@ -650,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="44" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1088">
@@ -664,22 +669,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="20" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+        <state line="46" column="44" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="40" selection-start="5555" selection-end="5555" vertical-scroll-proportion="0.0" vertical-offset="4914" max-vertical-offset="5423">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.6227898" vertical-offset="278" max-vertical-offset="5015">
+        <state line="51" column="26" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="1530">
+          <folding>
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="20" selection-start="1391" selection-end="1391" vertical-scroll-proportion="1.0333989" vertical-offset="137" max-vertical-offset="1462">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updatePaddle2#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#drawPaddles#0;class#GameScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>

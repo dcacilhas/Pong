@@ -73,9 +73,6 @@ public class GameScreen implements Screen {
 
     @Override
     public void render(float dt) {
-        //fps.log();
-        //System.out.println("Velocity.x: " + ball.getVelocityX() + " | Velocity.y: " + ball.getVelocityY());
-
         dt = Gdx.graphics.getRawDeltaTime();
         update(dt);
         draw(dt);
@@ -143,15 +140,7 @@ public class GameScreen implements Screen {
         paddle1.integrate(dt);
         paddle1.updateBounds();
 
-        if (paddle1.top() > fieldTop) {
-            paddle1.move(paddle1.getX(), fieldTop - paddle1.getHeight());
-            paddle1.setVelocity(0f, 0f);
-        }
-
-        if (paddle1.bottom() < fieldBottom) {
-            paddle1.move(paddle1.getX(), fieldBottom);
-            paddle1.setVelocity(0f, 0f);
-        }
+        restrictPaddle(paddle1);
     }
 
     private void updatePaddle2(float dt) {
@@ -176,14 +165,19 @@ public class GameScreen implements Screen {
         paddle2.integrate(dt);
         paddle2.updateBounds();
 
-        if (paddle2.top() > fieldTop) {
-            paddle2.move(paddle2.getX(), fieldTop - paddle2.getHeight());
-            paddle2.setVelocity(0f, 0f);
+        restrictPaddle(paddle2);
+    }
+
+    // Prevent paddle from leaving top/bottom of screen
+    private void restrictPaddle(Paddle paddle) {
+        if (paddle.top() > fieldTop) {
+            paddle.move(paddle.getX(), fieldTop - paddle.getHeight());
+            paddle.setVelocity(0f, 0f);
         }
 
-        if (paddle2.bottom() < fieldBottom) {
-            paddle2.move(paddle2.getX(), fieldBottom);
-            paddle2.setVelocity(0f, 0f);
+        if (paddle.bottom() < fieldBottom) {
+            paddle.move(paddle.getX(), fieldBottom);
+            paddle.setVelocity(0f, 0f);
         }
     }
 
@@ -193,15 +187,11 @@ public class GameScreen implements Screen {
 
         // Ball collision with field
         if (ball.left() < fieldLeft) {
-//            ball.move(fieldLeft, ball.getY());
-//            ball.reflect(true, false);
             score2++;
             score.play();
             reset();
         }
         if (ball.right() > fieldRight) {
-//            ball.move(fieldRight - ball.getWidth(), ball.getY());
-//            ball.reflect(true, false);
             score1++;
             score.play();
             reset();

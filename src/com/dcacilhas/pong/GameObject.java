@@ -93,10 +93,6 @@ public abstract class GameObject {
         position.set(x, y);
     }
 
-    public void translate(float x, float y) {
-        position.add(x, y);
-    }
-
     public void integrate(float dt) {
         position.add(velocity.x * dt, velocity.y * dt);
     }
