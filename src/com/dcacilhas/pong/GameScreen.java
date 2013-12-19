@@ -27,14 +27,13 @@ public class GameScreen implements Screen {
     private FreeTypeFontGenerator generator;
     private BitmapFont font;
     private SpriteBatch batch;
-    private FPSLogger fps = new FPSLogger();
     private float fieldTop, fieldBottom, fieldRight, fieldLeft;
     private GameState currentState = GameState.NEW;
-    private enum GameState { NEW, RESET, PLAY }
+    private enum GameState { NEW, RESET, PLAY, PAUSED }
     private int score1 = 0, score2 = 0;
-    private Game game;
+    private PongGame game;
 
-    public GameScreen (Game g) {
+    public GameScreen (PongGame g) {
         this.game = g;
         create();
     }
@@ -62,7 +61,7 @@ public class GameScreen implements Screen {
 
     @Override
     public void show() {
-
+        currentState = GameState.PLAY;
     }
 
     @Override
@@ -74,6 +73,7 @@ public class GameScreen implements Screen {
     public void render(float dt) {
         //fps.log();
         //System.out.println("Velocity.x: " + ball.getVelocityX() + " | Velocity.y: " + ball.getVelocityY());
+
         dt = Gdx.graphics.getRawDeltaTime();
         update(dt);
         draw(dt);
@@ -83,12 +83,12 @@ public class GameScreen implements Screen {
         switch (currentState) {
             case NEW:
                 newGame();
-                reset();
-                currentState = GameState.PLAY;
+                break;
+            case PAUSED:
+                updatePaused();
                 break;
             case RESET:
                 reset();
-                currentState = GameState.PLAY;
                 break;
             case PLAY:
                 handleInput();
@@ -99,17 +99,24 @@ public class GameScreen implements Screen {
         }
     }
 
+    private void updatePaused() {
+        currentState = GameState.PAUSED;
+        game.setScreen(game.pauseScreen);
+    }
+
     private void handleInput() {
         if (Gdx.input.isKeyPressed(Input.Keys.N)) {
             currentState = GameState.NEW;
         } else if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-            Gdx.app.exit();
+            updatePaused();
         }
     }
 
     private void newGame() {
         score1 = 0;
         score2 = 0;
+        reset();
+        currentState = GameState.PLAY;
     }
 
     private void updatePaddle1(float dt) {
@@ -187,13 +194,13 @@ public class GameScreen implements Screen {
 //            ball.move(fieldLeft, ball.getY());
 //            ball.reflect(true, false);
             score2++;
-            currentState = GameState.RESET;
+            reset();
         }
         if (ball.right() > fieldRight) {
 //            ball.move(fieldRight - ball.getWidth(), ball.getY());
 //            ball.reflect(true, false);
             score1++;
-            currentState = GameState.RESET;
+            reset();
         }
         if (ball.bottom() < fieldBottom) {
             ball.move(ball.getX(), fieldBottom);

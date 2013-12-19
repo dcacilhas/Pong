@@ -6,27 +6,23 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
 /**
  * Created by dcacilhas on 12/18/13.
  */
 public class MainMenu implements Screen {
     private SpriteBatch batch;
-    private Texture texture;
-    private Game game;
-    private Table table;
+    private PongGame game;
     private FreeTypeFontGenerator generator;
     private BitmapFont title, message;
     private float w = Gdx.graphics.getWidth();
     private float h = Gdx.graphics.getHeight();
     private final String TITLE = "PONG", MESSAGE = "Press Any Key To Start";
 
-    public MainMenu (Game g) {
+    public MainMenu (PongGame g) {
         this.game = g;
 
         batch = new SpriteBatch();
@@ -48,7 +44,7 @@ public class MainMenu implements Screen {
         batch.end();
 
         if(Gdx.input.isButtonPressed(Input.Buttons.LEFT) || Gdx.input.isKeyPressed(Input.Keys.ANY_KEY)) {
-            game.setScreen(new GameScreen(game));
+            game.setScreen(game.gameScreen);
         }
     }
 

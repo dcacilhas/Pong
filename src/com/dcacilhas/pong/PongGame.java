@@ -9,11 +9,17 @@ import com.badlogic.gdx.graphics.FPSLogger;
  * Created by dcacilhas on 12/18/13.
  */
 public class PongGame extends Game {
+    MainMenu mainMenuScreen;
+    GameScreen gameScreen;
+    PauseScreen pauseScreen;
     private FPSLogger fps = new FPSLogger();
 
     @Override
     public void create() {
-        setScreen(new MainMenu(this));
+        mainMenuScreen = new MainMenu(this);
+        gameScreen = new GameScreen(this);
+        pauseScreen = new PauseScreen(this);
+        setScreen(mainMenuScreen);
     }
 
     @Override
