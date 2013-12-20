@@ -10,6 +10,9 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
+import org.lwjgl.Sys;
+
+import java.util.Random;
 
 /**
  * Created by dcacilhas on 12/16/13.
@@ -20,6 +23,7 @@ public class GameScreen implements Screen {
     private static final float BALL_VELOCITY = 350f;
     private static final float BALL_VELOCITY_MODIFIER = 1.1f;
     private static final float PADDLE_VELOCITY = 400f;
+
     private PongGame game;
     private Sound paddle = Gdx.audio.newSound(Gdx.files.internal("assets/paddle.wav"));
     private Sound score = Gdx.audio.newSound(Gdx.files.internal("assets/score.wav"));
@@ -30,30 +34,28 @@ public class GameScreen implements Screen {
     private FreeTypeFontGenerator generator;
     private BitmapFont font;
     private SpriteBatch batch;
+    public enum GameState { NEW, RESET, PLAY, PAUSED }
+    public static GameState currentState;
     private float fieldTop, fieldBottom, fieldRight, fieldLeft;
-    private GameState currentState = GameState.NEW;
-    private enum GameState { NEW, RESET, PLAY, PAUSED }
     private int score1 = 0, score2 = 0;
+    private boolean p1Turn = false, p2Turn = false;
 
     public GameScreen (PongGame g) {
         this.game = g;
-        create();
-    }
 
-
-    public void create() {
+        // Set up playing field (whole screen)
         field.set(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         fieldLeft = field.x;
         fieldRight = field.x + field.width;
         fieldBottom = field.y;
         fieldTop = field.y + field.height;
+
         shapeRenderer = new ShapeRenderer();
         batch = new SpriteBatch();
         generator = new FreeTypeFontGenerator(Gdx.files.internal("assets/arcade.ttf"));
         font = generator.generateFont(128);
         font.setColor(Color.WHITE);
         newGame();
-        reset();
     }
 
     @Override
@@ -63,7 +65,6 @@ public class GameScreen implements Screen {
 
     @Override
     public void show() {
-        currentState = GameState.PLAY;
     }
 
     @Override
@@ -84,7 +85,7 @@ public class GameScreen implements Screen {
                 newGame();
                 break;
             case PAUSED:
-                updatePaused();
+                game.setScreen(game.pauseScreen);
                 break;
             case RESET:
                 reset();
@@ -98,22 +99,20 @@ public class GameScreen implements Screen {
         }
     }
 
-    private void updatePaused() {
-        currentState = GameState.PAUSED;
-        game.setScreen(game.pauseScreen);
-    }
-
     private void handleInput() {
         if (Gdx.input.isKeyPressed(Input.Keys.N)) {
             currentState = GameState.NEW;
         } else if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-            updatePaused();
+            currentState = GameState.PAUSED;
+
         }
     }
 
     private void newGame() {
         score1 = 0;
         score2 = 0;
+        p1Turn = true;
+        p2Turn = false;
         reset();
         currentState = GameState.PLAY;
     }
@@ -188,11 +187,15 @@ public class GameScreen implements Screen {
         // Ball collision with field
         if (ball.left() < fieldLeft) {
             score2++;
+            p1Turn = true;
+            p2Turn = false;
             score.play();
             reset();
         }
         if (ball.right() > fieldRight) {
             score1++;
+            p2Turn = true;
+            p1Turn = false;
             score.play();
             reset();
         }
@@ -251,7 +254,6 @@ public class GameScreen implements Screen {
     }
 
     private void draw(float dt) {
-        Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 
         shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
@@ -279,11 +281,20 @@ public class GameScreen implements Screen {
     }
 
     public void reset() {
+        // Determine who serves and set appropriate ball angle
+        Random random = new Random();
+        float angle = 0f;
+        if (p1Turn) {
+            angle = random.nextFloat() * (-45 - 45) + 45;   // -45 -> 45
+        } else if (p2Turn) {
+            angle = random.nextFloat() * (135 - 225) + 225; // 135 -> 225
+        }
+
         // Reset ball
         ball.move(field.x + (field.width - ball.getWidth()) /2, field.y + (field.height - ball.getHeight()) /2);
         Vector2 velocity = ball.getVelocity();
         velocity.set(BALL_VELOCITY, 0);
-        velocity.setAngle(-45);
+        velocity.setAngle(angle);
         ball.setVelocity(velocity);
 
         // Reset paddles

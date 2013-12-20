@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
@@ -33,14 +34,20 @@ public class PauseScreen implements Screen {
 
     @Override
     public void render(float dt) {
+        Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 
         batch.begin();
-        paused.draw(batch, "PAUSED", Gdx.graphics.getWidth() / 2 - paused.getBounds("PAUSED").width / 2, Gdx.graphics.getHeight() * 0.5f);
-        message.drawMultiLine(batch, msg, Gdx.graphics.getWidth() / 2 - message.getMultiLineBounds(msg).width / 2, Gdx.graphics.getHeight() * 0.3f);
+        paused.draw(batch, "PAUSED", Gdx.graphics.getWidth() / 2 - paused.getBounds("PAUSED").width / 2, Gdx.graphics.getHeight() * 0.6f);
+        message.drawMultiLine(batch, msg, Gdx.graphics.getWidth() / 2 - message.getMultiLineBounds(msg).width / 2, Gdx.graphics.getHeight() * 0.4f);
         batch.end();
+
         if (Gdx.input.isKeyPressed(Input.Keys.Q)) {
             Gdx.app.exit();
         } else if (Gdx.input.isKeyPressed(Input.Keys.R) && !Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+            GameScreen.currentState = GameScreen.GameState.PLAY;
+            game.setScreen(game.gameScreen);
+        } else if (Gdx.input.isKeyPressed(Input.Keys.N)) {
+            GameScreen.currentState = GameScreen.GameState.NEW;
             game.setScreen(game.gameScreen);
         }
     }
