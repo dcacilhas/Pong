@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ac31a6-4638-43bc-89ae-00b1c32e631f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" afterPath="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pong.iws" />
@@ -66,10 +67,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PongGame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PongGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="10" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
+            <state line="57" column="27" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.63261294" vertical-offset="579" max-vertical-offset="1105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LwjglApplicationConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/gdx-backend-lwjgl-sources.jar!/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="16" selection-start="3360" selection-end="3360" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
@@ -84,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScreen.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="33" selection-start="8156" selection-end="8156" vertical-scroll-proportion="0.09823183" vertical-offset="4081" max-vertical-offset="5406">
+            <state line="255" column="33" selection-start="8156" selection-end="8156" vertical-scroll-proportion="0.0" vertical-offset="4081" max-vertical-offset="5406">
               <folding />
             </state>
           </provider>
@@ -130,9 +140,9 @@
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/Ball.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PauseScreen.java" />
         <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java" />
       </list>
     </option>
   </component>
@@ -421,7 +431,11 @@
       <created>1387581551257</created>
       <updated>1387581551257</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Pause screen fixed, player turns implemented&#10;">
+      <created>1387581576970</created>
+      <updated>1387581576970</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -475,7 +489,8 @@
     <MESSAGE value="Sounds added" />
     <MESSAGE value="Comments" />
     <MESSAGE value="Pause screen fixed&#10;Player turns implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pause screen fixed&#10;Player turns implemented" />
+    <MESSAGE value="Pause screen fixed, player turns implemented&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pause screen fixed, player turns implemented&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -716,13 +731,6 @@
         <state line="28" column="16" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="680" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="10" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="20" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1496">
@@ -748,7 +756,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="33" selection-start="8156" selection-end="8156" vertical-scroll-proportion="0.09823183" vertical-offset="4081" max-vertical-offset="5406">
+        <state line="255" column="33" selection-start="8156" selection-end="8156" vertical-scroll-proportion="0.0" vertical-offset="4081" max-vertical-offset="5406">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/gdx-backend-lwjgl-sources.jar!/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="16" selection-start="3360" selection-end="3360" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dcacilhas/pong/PongGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="27" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.63261294" vertical-offset="579" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>

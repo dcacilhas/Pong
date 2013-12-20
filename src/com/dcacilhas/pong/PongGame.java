@@ -1,5 +1,6 @@
 package com.dcacilhas.pong;
 
+import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
@@ -56,6 +57,7 @@ public class PongGame extends Game {
         cfg.height = 720;
         cfg.title = "Pong";
         cfg.useGL20 = true;
+        cfg.addIcon("assets/icon.png", Files.FileType.Internal);
         new LwjglApplication(new PongGame(), cfg);
     }
 }
